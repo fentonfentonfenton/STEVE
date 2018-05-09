@@ -1,0 +1,25 @@
+version: '3'
+services:
+  app:
+    build: .
+    environment:
+      - TESTRAIL=true
+      - TESTRAIL_URL=https://bookingbug.testrail.net
+      - TESTRAIL_USERNAME=qa+testrail@bookingbug.com
+      - TESTRAIL_PASSWORD=Qwaszx12
+      - TESTRAIL_PROJECT_ID=13
+      - SCREENSHOTS=true
+      - S3_BUCKET_NAME=bobe
+      - S3_BUCKET_URL=https://bobe.nyc3.digitaloceanspaces.com
+      - S3_BUCKET_KEY=5VR2RDJ4L5YW2VPNDYVY
+      - S3_BUCKET_SECRET=Qk6cb9zSgWBz1XW1qVAr3SF1PUF78blIwkLyhb2QOhw
+      - S3_REGION=NYC3
+      - S3_ENDPOINT=https://nyc3.digitaloceanspaces.com
+      - SAUCE_USERNAME=bobeiscool
+      - SAUCE_ACCESS_KEY=bd943d6d-b158-4ba1-a0bc-606d8e626969
+      - SLACK_FEEDBACK_CHANNEL=@marius.jorgensen
+    volumes:
+      - ./logs:/app/logs
+    volumes:
+      - ./features:/app/features
+    privileged: true
