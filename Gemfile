@@ -2,6 +2,7 @@
 
 source 'https://www.rubygems.org'
 
+gem 'site_prism'
 gem 'activesupport'
 gem 'aws-sdk'
 gem 'capybara'

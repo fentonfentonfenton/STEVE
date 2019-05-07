@@ -3,6 +3,7 @@
 Bundler.require
 require 'capybara/cucumber'
 require_all 'features/support/lib'
+require 'site_prism'
 Dotenv.load
 
 if testrail_enabled && missing_testrail_environment_variables
